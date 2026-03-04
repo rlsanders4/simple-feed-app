@@ -1,0 +1,214 @@
+/* General layout */
+body { 
+    font-family: Arial, sans-serif; 
+    max-width: 600px; 
+    margin: auto; 
+    background: #f4f4f9;
+    color: #333;
+  }
+  
+  /* Form row */
+  .form-row {
+    display: flex;
+  }
+  
+  /* Input box stretches */
+  input {
+    flex: 1;
+    padding: 10px;
+    padding-bottom: 0px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  /* Buttons styling */
+  button {
+    padding: 10px 16px;
+    padding-bottom: 0px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.2s ease;
+  }
+  
+  /* Post button */
+  button[type="submit"] {
+    background: #007bff;
+    color: white;
+  }
+  
+  button[type="submit"]:hover {
+    background: #0056b3;
+  }
+  
+  /* Danger (Clear) button */
+  .danger {
+    background: #d9534f;
+    color: white;
+  }
+  
+  .danger:hover {
+    background: #b52b27;
+  }
+  
+  /* Feed list */
+  ul#feed {
+    list-style: none; /* remove bullets */
+    padding: 0;
+    margin-top: 20px 0px 0px 0px;
+  }
+  
+  /* Individual posts as cards */
+  ul#feed li {
+    background: white;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  /* Post content */
+  ul#feed li div {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  /* Timestamp */
+  ul#feed li small {
+    color: #888;
+    font-size: 12px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 480px) {
+    .form-row {
+      flex-direction: column;
+    }
+    button {
+      width: 100%;
+    }
+  }
+
+  ul#feed li img {
+    display: block;
+    max-width: 100%;
+    margin-top: 8px;
+    border-radius: 5px;
+  }
+
+  
+  /* Large text input */
+  #content {
+    flex: 1;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  /* Small camera upload button */
+  .file-label {
+    width: 40px;
+    height: 40px;
+    background: #007bff;
+    color: white;
+  
+    border-radius: 8px;   /* square with soft corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+  }
+  
+  .file-label:hover {
+    background: #0056b3;
+  }
+  
+  .file-label:active {
+    transform: scale(0.95);
+  }
+  
+  /* Ensure SVG stays centered and consistent */
+  .file-label svg {
+    width: 18px;
+    height: 18px;
+    display: block;
+  }
+  
+  /* Submit button */
+  button[type="submit"] {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background: #0056b3;
+  }
+  
+  /* Clear button */
+  .danger {
+    background: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .danger:hover {
+    background: #b52b27;
+  }
+
+  /* Keep main row inline */
+  .form-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  /* File info below */
+  .file-info {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #555;
+  }
+  
+  .file-info.hidden {
+    display: none;
+  }
+  
+  .file-name {
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .remove-file {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin-left: 8px;
+  line-height: 1;
+  font-size: 13px;
+  color: #888;
+  cursor: pointer;
+  }
+  
+  .remove-file:hover {
+    color: #d9534f;
+  }

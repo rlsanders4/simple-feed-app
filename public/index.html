@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Twitter</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Twitter</h1>
+
+  <form id="postForm" class="form-row" enctype="multipart/form-data">
+    <input type="text" id="content" placeholder="Write something..." />
+  
+    <label for="image" class="file-label" title="Upload image">
+      <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M4 5h4l2-2h4l2 2h4v14H4zM12 17a4 4 0 100-8 4 4 0 000 8z"/>
+      </svg>
+    </label>
+    <input type="file" id="image" accept="image/*" hidden>
+  
+    <button type="submit">Post</button>
+    <button type="button" id="clearBtn" class="danger">Clear</button>
+  </form>
+
+  <div id="fileInfo" class="file-info hidden">
+    <span id="fileName" class="file-name"></span>
+    <button type="button" id="removeFile" class="remove-file">✕</button>
+  </div>
+  
+  <ul id="feed"></ul>
+  
+  <ul id="feed"></ul>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
